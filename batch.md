@@ -44,4 +44,41 @@ set a=5 & echo %a%
 set a=4
 set a=5 & echo !a!
 ```
+## 字符串及路径处理
+n:name,文件名
+x:extension,拓展名
+p:path,文件路径
+d:driver,文件所在盘符
+f:full name,文件所在完整的路径
+s:short name,文件短名
+a:attribute,文件属性
+t:time,文件时间
+z:size,文件大小
+``` batch
+@echo off
+for %%i in (./*) do (
+    echo %%~ni
+    echo %%~xi
+    echo %%~pi
+    echo %%~di
+    echo %%~fi
+    echo %%~si
+    echo %%~ai
+    echo %%~ti
+    echo %%~zi
+)
+```
+效果如下
+![path](./batch_pic/path.png)
+假设路径变量为%%L,比如
+``` batch
+for %%L in (./*) do echo(
+    example
+)
+```
+
+
+
+
+
 
