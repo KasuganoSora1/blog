@@ -45,15 +45,15 @@ set a=4
 set a=5 & echo !a!
 ```
 ## 字符串及路径处理
-n:name,文件名
-x:extension,拓展名
-p:path,文件路径
-d:driver,文件所在盘符
-f:full name,文件所在完整的路径
-s:short name,文件短名
-a:attribute,文件属性
-t:time,文件时间
-z:size,文件大小
+n:name,文件名 <br/>
+x:extension,拓展名 <br/>
+p:path,文件路径 <br/>
+d:driver,文件所在盘符 <br/>
+f:full name,文件所在完整的路径 <br/>
+s:short name,文件短名 <br/>
+a:attribute,文件属性<br/>
+t:time,文件时间<br/>
+z:size,文件大小<br/>
 ``` batch
 @echo off
 for %%i in (./*) do (
