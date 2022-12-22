@@ -1,3 +1,4 @@
+[toc]
 # for 循环
 
 ``` batch
@@ -44,7 +45,7 @@ set a=5 & echo %a%
 set a=4
 set a=5 & echo !a!
 ```
-## 字符串及路径处理
+## 路径处理
 n:name,文件名 <br/>
 x:extension,拓展名 <br/>
 p:path,文件路径 <br/>
@@ -70,12 +71,18 @@ for %%i in (./*) do (
 ```
 效果如下
 ![path](./batch_pic/path.png)
-假设路径变量为%%L,比如
+## 字符串截取
 ``` batch
-for %%L in (./*) do echo(
-    example
-)
+@echo off
+set str=abcdefghijklmn
+rem 从字符串的第n位截取长度为m的字符串
+echo %str:~3,4%
+rem 从字符串的倒数第n位开始截取字符串
+echo %str:~-3%
+rem 从字符串的第n位开始截取字符串
+echo %str:~3%
 ```
+![str](./batch_pic/str.png)
 
 
 
